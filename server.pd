@@ -1,0 +1,18 @@
+#N canvas 749 132 498 337 10;
+#X obj 87 77 netreceive 5000;
+#X obj 98 125 route 0 1;
+#X obj 100 168 \$1;
+#X obj 140 168 \$1;
+#X obj 192 126 print;
+#X obj 273 35 loadbang;
+#X msg 288 76 \; pd dsp 1;
+#X msg 56 233 \; pd open effects/\$1.pd /Users/alp/Documents/Coding/ampPi-Pd
+;
+#X msg 122 196 \; pd-effects/\$1.pd menuclose;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 5 0 6 0;
